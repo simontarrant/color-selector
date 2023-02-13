@@ -1,0 +1,20 @@
+/* || VARIABLES */
+:root {
+    --COLOR-TILE-SIZE: min(300px, 80vw);
+}
+
+.ColorTile {
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px black;
+
+    margin: 1rem;
+
+    width: var(--COLOR-TILE-SIZE);
+    height: var(--COLOR-TILE-SIZE);
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}

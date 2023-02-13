@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import ColorTile from './ColorTile.js'
+import Search from './Search.js';
+import colorNames from 'colornames';
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+
+  const [col, setCol] = useState('navy');
+  const [hexVal, setHexVal] = useState(colorNames(col));
+  const [isDarkText, setIsDarkText] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ColorTile
+        col={col}
+        hexVal={hexVal}
+        isDarkText={isDarkText}/>
+      <Search
+        col={col}
+        setCol={setCol}
+        setHexVal={setHexVal}
+        isDarkText={isDarkText}
+        setIsDarkText={setIsDarkText}/>
     </div>
   );
 }

@@ -1,0 +1,36 @@
+/* || VARIABLES */
+:root {
+    --SEARCH-WIDTH: min(300px, 80vw);
+    --SEARCH-HEIGHT: 50px;
+}
+
+.Search {
+    width: 100%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.searchLabel {
+    position: absolute;
+    left: -10000px;
+}
+
+.searchInput,
+.textColButton {
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 2px black;
+
+    font-size: 1rem;
+
+    padding: 0.3rem;
+
+    width: var(--SEARCH-WIDTH);
+    height: var(--SEARCH-HEIGHT);
+}
+
+.textColButton {
+    margin: 1rem;
+}
